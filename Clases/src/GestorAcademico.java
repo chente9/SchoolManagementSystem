@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-public class GestorAcademico implements ServiciosAcademicosI{
+public class GestorAcademico {
 
     //ArrayList para almacenar datos de estudiantes
     public ArrayList<Estudiante> listaEstudiantes;
