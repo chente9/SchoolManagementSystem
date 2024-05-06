@@ -1,5 +1,8 @@
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
 public class GestorAcademico {
 
     //ArrayList para almacenar datos de estudiantes
@@ -56,4 +59,13 @@ public class GestorAcademico {
     }
 
     }
+
+
+    public void desinscribirEstudianteCurso(int idEstudiante, int idCurso) throws EstudianteNoInscritoExcepcion {
+        ArrayList estudiantesInscritos = estudiantesPorCurso.get(idCurso);
+        if (estudiantesInscritos != null && estudiantesInscritos.contains(idEstudiante)) {
+            estudiantesInscritos.remove(Integer.valueOf(idEstudiante));
+        } else throw new EstudianteNoInscritoExcepcion ("El estudiante no está isncrito en el curso o el ID del curso no es valido");
+    }
+
 }
